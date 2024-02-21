@@ -1,7 +1,15 @@
 import "./App.css";
+import { UsersProvider } from "./contexts/users";
+import Users from "./Users";
+import AddUser from "./AddUser";
 
 function App() {
-  return <div>Hello</div>;
+  return (
+    <UsersProvider>
+      <AddUser />
+      <Users />
+    </UsersProvider>
+  );
 }
 
 export default App;
